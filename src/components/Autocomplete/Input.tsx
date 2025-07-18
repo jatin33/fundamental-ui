@@ -15,6 +15,7 @@ function Input({ ref, value, activeIndex, className, listOpen, onChange }: Props
         type="search"
         aria-label="Search for any option"
         className={className}
+        placeholder="Search for an option"
         onChange={(e) => {
             onChange(e.target.value);
         }}
