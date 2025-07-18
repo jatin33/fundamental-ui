@@ -1,0 +1,26 @@
+.dropdown__container {
+    position: relative;
+}
+
+.dropdown__list {
+    display: block;
+    border: 1px solid black;
+    padding: 0.25rem;
+    box-shadow: 3px 3px 3px 2px rgb(0 0 0 / 20%);
+    width: fit-content;
+    list-style-type: none;
+    margin: 0;
+}
+
+/* .dropdown__container:hover .dropdown__list {
+    display: block;
+} */
+
+.dropdown__item {
+    width: fit-content;
+    cursor: pointer;
+}
+
+.dropdown__item:hover {
+    background-color: lightgray;
+}

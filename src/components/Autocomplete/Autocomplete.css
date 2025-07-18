@@ -1,0 +1,42 @@
+.container {
+    position: relative;
+}
+
+.suggestion__item {
+    padding: 4px;
+    cursor: pointer;
+}
+
+.suggestion__item:hover {
+    background-color: rgb(0 0 0 / 20%);
+}
+
+.suggestion__list {
+    position: absolute;
+    list-style-type: none;
+    inset: 10;
+    z-index: 100;
+    box-shadow: 3px 3px 3px 2px rgb(0 0 0 / 20%);
+
+    border: 1px solid black;
+}
+
+input {
+    padding: 8px;
+    width: 50%;
+    border-radius: 8px;
+}
+
+.highlighted {
+    background-color: rgba(155, 192, 23, 0.862);
+}
+
+.loader {
+    position: absolute;
+    list-style-type: none;
+    inset: 10;
+    z-index: 100;
+    box-shadow: 3px 3px 3px 2px rgb(0 0 0 / 20%);
+
+    border: 1px solid black;
+}

@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.base {
+    height: 1rem;
+    width: 1rem;
+    border: 1px solid black;
+}
+
+.snake {
+    background-color: red;
+}
+
+.fruit {
+    background-color: green;
+}
