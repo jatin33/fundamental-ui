@@ -1,0 +1,58 @@
+---
+title: Toast System/Feature Checklist
+---
+
+# 🧾 Toast System Feature Checklist
+
+This document outlines the **implemented**, **pending**, and **advanced (nice-to-have)** features for the toast notification system.
+
+---
+
+## ✅ Must-Haves (All Implemented)
+
+- [x] `ToastProvider` to manage global toast state
+- [x] `useToast` hook to expose `addToast` and `removeToast`
+- [x] `ToastContainer` rendered via `createPortal` to `document.body`
+- [x] Multiple toasts stack correctly in bottom-right
+- [x] Each toast auto-dismisses after `duration` ms
+- [x] Manual dismiss (`x` button) works per-toast
+- [x] `role="alert"` added for accessibility
+- [x] Clean `setTimeout` and `clearTimeout` on mount/unmount
+- [x] `createdAt + duration` logic ensures FIFO dismissal order
+
+---
+
+## 🟡 Good-to-Haves (Pending)
+
+- [ ] Enforce `maxSnackBar` limit (remove oldest toast if limit is reached)
+- [ ] `renderToast?: (toast) => JSX.Element` for custom content
+- [ ] Position config (`top-left`, `bottom-left`, etc.)
+- [ ] Pause auto-dismiss on hover
+- [ ] Show Progress bar at bottom of each toast
+- [x] Type-based styling (success, error, default)
+
+---
+
+## 🔵 Great-to-Implement (Advanced Enhancements)
+
+- [ ] Add entry/exit animations using `framer-motion` or `react-transition-group`
+- [ ] Add queueing logic for overflow (if `maxSnackBar` is enforced)
+- [ ] Add support for `rtl`-aware positioning
+- [ ] `aria-live="assertive"` region for screen readers (currently covered by `role="alert"`)
+- [ ] Add unit tests for:
+  - `useToast` behavior
+  - Auto-dismiss logic
+  - Manual dismissal
+  - Max limit enforcement
+
+---
+
+## 📌 Notes
+
+- The system correctly handles **staggered auto-dismissals** thanks to the `createdAt + duration` tracking.
+- Current toast rendering order is correct (`.reverse()` in `ToastContainer`).
+- Styling is minimal but functional; future animation + theme tokens could be layered in.
+
+---
+
+> ✨ Feel free to check off each Good-to-Have or Great-to-Implement feature as you complete them.
